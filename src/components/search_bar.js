@@ -5,18 +5,39 @@ class SearchBar extends Component {
         super(props);
 
         this.state = {
-            query: ''
+            query: '',
+            focused: false
         }
     }
 
     render() {
         return (
             <div className="searchBar">
-                <input type="text" className="searchBar-input"
-                    value = {this.state.query}
+                <input type="text"
+                       className="searchBar-input"
+                       placeholder="Enter event name here"
+                       value = {this.state.query}
+                       onChange = {event => this.onInputChange(event.target.value)}
+                       onBlur = {this.onFocusLost}
+                       onFocus = {this.onFocusGet}
                 />
+                <div className="searchBar-border"></div>
             </div>
         )
+    }
+
+    onInputChange(query) {
+        this.setState({
+            query
+        });
+    }
+
+    onFocusLost() {
+        console.log('lost');
+    }
+
+    onFocusGet() {
+        console.log('get');
     }
 }
 
