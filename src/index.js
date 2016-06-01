@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import SearchBar from './components/search_bar'
+import SearchBar from './components/search_bar/search_bar'
 
 class App extends Component {
     constructor(props) {
