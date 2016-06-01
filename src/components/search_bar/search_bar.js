@@ -12,7 +12,7 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <div className="searchBar">
+            <div className="searchBar indent">
                 <input type="text"
                        className="searchBar-input"
                        placeholder="Enter event name here"
